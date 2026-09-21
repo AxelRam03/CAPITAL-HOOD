@@ -1,1 +1,0 @@
-Abre index.html. Reemplaza el número de WhatsApp, datos, precios y fotografías reales del cliente.
