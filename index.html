@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- SEO local: script.js reemplaza estos valores con los de js/config.js.
+       Al publicar, deja también aquí los datos reales (para buscadores que no ejecutan JS). -->
+  <title>BLACK & RED BARBER SHOP | Barbería en Ciudad de México</title>
+  <meta name="description" content="Barbería en Ciudad de México. Cortes, fades, barba y servicios de grooming. Reserva tu cita.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://example.com/">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="BLACK & RED BARBER SHOP | Barbería en Ciudad de México">
+  <meta property="og:description" content="Barbería en Ciudad de México. Cortes, fades, barba y servicios de grooming. Reserva tu cita.">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:image" content="assets/images/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BLACK & RED BARBER SHOP | Barbería en Ciudad de México">
+  <meta name="twitter:description" content="Barbería en Ciudad de México. Cortes, fades, barba y servicios de grooming. Reserva tu cita.">
+  <meta name="twitter:image" content="assets/images/og.jpg">
+
+  <!-- Schema.org: se genera desde config.js y solo incluye datos reales (sin corchetes) -->
+  <script type="application/ld+json" id="schema">{"@context":"https://schema.org","@type":"BarberShop","name":"BLACK & RED BARBER SHOP"}</script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Bowlby+One&family=Yellowtail&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/config.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+<!-- Filtros SVG (bordes de tinta irregulares) + sprite de iconos dibujados a mano -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <filter id="ink" x="-3%" y="-8%" width="106%" height="116%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="2" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.4" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="rough" x="-5%" y="-10%" width="110%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.02 0.07" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </defs>
+
+  <symbol id="i-scissors" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 6 41 43.5M50 6 23 43.5"/><circle cx="21" cy="51" r="8"/><circle cx="43" cy="51" r="8"/></g></symbol>
+  <symbol id="i-razor" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 52C6 52 30 40 46 20l4 4C40 42 22 56 10 58Z"/><path d="M46 20 58 8l4 4-12 12"/><path d="M14 50 40 30"/></g></symbol>
+  <symbol id="i-comb" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 16h52v12H6Z"/><path d="M12 28v22M20 28v22M28 28v22M36 28v22M44 28v22M52 28v22"/></g></symbol>
+  <symbol id="i-bottle" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M26 6h12v9H26Z"/><path d="M24 15h16l5 10v32H19V25Z"/><path d="M26 36h12M26 43h12M26 50h7"/></g></symbol>
+  <symbol id="i-star" viewBox="0 0 64 64"><path fill="currentColor" d="M32 4 38.8 22.7 58.6 23.3 42.9 35.6 48.5 54.7 32 43.5 15.5 54.7 21.1 35.6 5.4 23.3 25.2 22.7Z"/></symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="3.6" stroke-linejoin="round" d="M32 6a25 25 0 0 0-21.5 37.7L7 58l14.7-3.4A25 25 0 1 0 32 6Z"/><path fill="currentColor" d="M23 20c-1 4 1 10 6 15s11 7 15 6l1.5-4-5.5-3-2.5 2.5c-3-1.5-5.5-4-7-7l2.5-2.5-3-5.5Z"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="48" height="48" rx="14"/><circle cx="32" cy="32" r="11"/></g><circle cx="46" cy="18" r="2.6" fill="currentColor"/></symbol>
+  <symbol id="i-tiktok" viewBox="0 0 64 64"><g fill="none" stroke="currentColor" stroke-width="3.8" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8v30a11 11 0 1 1-11-11"/><path d="M38 8c1 8 6 13 14 14"/></g></symbol>
+  <symbol id="i-close" viewBox="0 0 64 64"><path fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round" d="M14 14 50 50M50 14 14 50"/></symbol>
+</svg>
+
+<a class="skip" href="#main">Ir al contenido</a>
+
+<!-- ============================ NAVBAR ============================ -->
+<header class="nav" id="top">
+  <div class="nav__bar">
+    <a class="logo" href="#inicio">
+      <svg class="ico logo__mark" aria-hidden="true"><use href="#i-scissors"/></svg>
+      <span class="logo__text" data-cfg="brand.name">BLACK & RED BARBER SHOP</span>
+    </a>
+
+    <nav class="nav__menu" id="menu" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+      <a class="nav__wa" data-wa href="#">
+        <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </nav>
+
+    <button type="button" class="btn btn--red btn--sm nav__cta" data-book>Reservar cita</button>
+    <button type="button" class="nav__toggle" aria-expanded="false" aria-controls="menu" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============================ HERO ============================ -->
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+  <div class="pole pole--v" aria-hidden="true"></div>
+
+  <div class="hero__inner">
+    <p class="hero__sign" data-cfg="brand.name">BLACK & RED BARBER SHOP</p>
+
+    <h1 class="hero__title" id="hero-title">
+      <span class="sr"><span data-cfg="brand.name">BLACK & RED BARBER SHOP</span>: </span>
+      <span class="l1">Tu estilo.</span>
+      <span class="l2">
+        <svg class="brush" viewBox="0 0 400 90" preserveAspectRatio="none" aria-hidden="true">
+          <path filter="url(#rough)" fill="currentColor" d="M3 24C50 8 120 18 190 12 260 6 340 10 397 20L393 54C340 62 300 56 240 64 170 72 70 64 8 72Z"/>
+          <path filter="url(#rough)" fill="currentColor" d="M20 70C80 78 160 74 230 80M60 8C120 2 200 6 280 2" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill-opacity="0"/>
+        </svg>
+        <span class="l2__text">Tu sello.</span>
+      </span>
+    </h1>
+
+    <div class="hero__photo taped">
+      <figure class="ph" data-photo="hero" data-label="Foto principal" data-w="1200" data-h="1500" data-eager style="--ar:4/5"></figure>
+    </div>
+
+    <p class="hero__sub">Cortes precisos. Barba impecable.<br>Estilo que habla por ti.</p>
+
+    <div class="hero__cta">
+      <button type="button" class="btn btn--red" data-book>Reservar cita</button>
+      <a class="btn btn--line" href="#servicios">Ver servicios</a>
+    </div>
+
+    <svg class="hero__scissors" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-scissors"/></svg>
+    <svg class="hero__star hero__star--a" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-star"/></svg>
+    <svg class="hero__star hero__star--b" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-star"/></svg>
+  </div>
+</section>
+
+<!-- ============================ PROPUESTA DE VALOR ============================ -->
+<section class="value torn-t torn-b" id="propuesta" aria-labelledby="value-title">
+  <div class="wrap value__grid">
+    <div class="value__head">
+      <h2 class="d-title" id="value-title">No es solo un corte.</h2>
+      <p class="value__lead">Cada detalle importa. Desde el primer movimiento de la máquina hasta el último acabado.</p>
+      <p class="value__who">Cortes, fades y barba para hombres que quieren llegar con estilo propio.</p>
+    </div>
+
+    <ul class="value__list">
+      <li class="rv">
+        <svg class="ico" aria-hidden="true"><use href="#i-scissors"/></svg>
+        <h3>Corte preciso</h3>
+        <p>Líneas limpias y transiciones parejas.</p>
+      </li>
+      <li class="rv">
+        <svg class="ico" aria-hidden="true"><use href="#i-razor"/></svg>
+        <h3>Barba perfecta</h3>
+        <p>Perfilado y recorte a la medida de tu rostro.</p>
+      </li>
+      <li class="rv">
+        <svg class="ico" aria-hidden="true"><use href="#i-comb"/></svg>
+        <h3>Atención personalizada</h3>
+        <p>Primero escuchamos lo que quieres. Después cortamos.</p>
+      </li>
+      <li class="rv">
+        <svg class="ico" aria-hidden="true"><use href="#i-bottle"/></svg>
+        <h3>Productos profesionales</h3>
+        <p>Calidad de barbería para tu cabello y tu barba.</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================ SERVICIOS ============================ -->
+<section class="services" id="servicios" aria-labelledby="services-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="d-title" id="services-title">Tu estilo empieza aquí.</h2>
+      <p class="sec-head__note">Elige tu servicio y agenda en minutos.</p>
+    </header>
+    <ol class="menu" id="service-list"></ol>
+  </div>
+</section>
+
+<!-- ============================ SERVICIO DESTACADO ============================ -->
+<section class="feature" aria-labelledby="feature-title">
+  <div class="wrap feature__grid">
+    <h2 class="feature__title" id="feature-title">No sigas el estilo.<br>Crea el tuyo.</h2>
+
+    <div class="feature__row">
+      <div class="feature__body">
+        <h3 class="feature__name" data-feat="name">[Servicio destacado]</h3>
+        <p class="feature__desc" data-feat="desc">[Descripción]</p>
+        <button type="button" class="btn btn--ink" data-book data-feat-book>Reservar ahora</button>
+      </div>
+      <p class="stamp" aria-label="Precio"><span data-feat="price">[Precio]</span></p>
+    </div>
+
+    <svg class="feature__star" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-star"/></svg>
+  </div>
+</section>
+
+<!-- ============================ GALERÍA ============================ -->
+<section class="gallery" id="trabajos" aria-labelledby="gallery-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="d-title" id="gallery-title">Trabajos que hablan.</h2>
+    </header>
+
+    <div class="gal">
+      <div class="gal__item g1 taped rv"><figure class="ph" data-photo="g1" data-label="Fade" data-w="900" data-h="1150"><figcaption>Fade</figcaption></figure></div>
+      <div class="gal__item g2 rv"><figure class="ph" data-photo="g2" data-label="Corte clásico" data-w="900" data-h="900"><figcaption>Corte clásico</figcaption></figure></div>
+      <div class="gal__item g3 taped rv"><figure class="ph" data-photo="g3" data-label="Barba" data-w="700" data-h="1000"><figcaption>Barba</figcaption></figure></div>
+      <div class="gal__item g4 rv"><figure class="ph" data-photo="g4" data-label="Detalle" data-w="700" data-h="800"><figcaption>Detalle</figcaption></figure></div>
+      <div class="gal__item g5 rv"><figure class="ph" data-photo="g5" data-label="Barbero trabajando" data-w="900" data-h="1200"><figcaption>En la silla</figcaption></figure></div>
+      <div class="gal__item g6 taped rv"><figure class="ph" data-photo="g6" data-label="Herramientas" data-w="900" data-h="800"><figcaption>Herramientas</figcaption></figure></div>
+      <div class="gal__item g7 rv"><figure class="ph" data-photo="g7" data-label="El local" data-w="1000" data-h="700"><figcaption>El local</figcaption></figure></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ EXPERIENCIA ============================ -->
+<section class="exp" id="nosotros" aria-labelledby="exp-title">
+  <div class="wrap exp__grid">
+    <h2 class="exp__title" id="exp-title">
+      <span class="exp__l1">Entra como cliente.</span>
+      <span class="exp__l2">Sal como leyenda.</span>
+    </h2>
+
+    <p class="exp__text">Un espacio creado para que desconectes, te sientes y salgas con un estilo que sea completamente tuyo.</p>
+
+    <div class="exp__photo taped">
+      <figure class="ph" data-photo="interior" data-label="Interior de la barbería" data-w="900" data-h="1100" style="--ar:4/5"></figure>
+    </div>
+
+    <ul class="stats" id="stats"></ul>
+  </div>
+</section>
+
+<!-- ============================ POR QUÉ NOSOTROS ============================ -->
+<section class="why" aria-labelledby="why-title">
+  <div class="wrap why__grid">
+    <h2 class="d-title why__title" id="why-title">¿Por qué nosotros?</h2>
+    <svg class="why__star" viewBox="0 0 64 64" aria-hidden="true"><use href="#i-star"/></svg>
+
+    <ol class="why__list">
+      <li><span class="num" aria-hidden="true">01</span><h3>Barberos profesionales</h3></li>
+      <li><span class="num" aria-hidden="true">02</span><h3>Atención personalizada</h3></li>
+      <li><span class="num" aria-hidden="true">03</span><h3>Herramientas sanitizadas</h3></li>
+      <li><span class="num" aria-hidden="true">04</span><h3>Productos profesionales</h3></li>
+      <li><span class="num" aria-hidden="true">05</span><h3>Ambiente cómodo</h3></li>
+      <li><span class="num" aria-hidden="true">06</span><h3>Puntualidad</h3></li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ TESTIMONIOS ============================ -->
+<section class="reviews" id="testimonios" aria-labelledby="reviews-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <h2 class="d-title" id="reviews-title">Lo que dicen nuestros clientes.</h2>
+    </header>
+    <!-- Se rellena desde config.testimonials. Preparado para Google Reviews: ver renderReviews() en script.js -->
+    <ul class="reviews__list" id="reviews" data-source="manual"></ul>
+  </div>
+</section>
+
+<!-- ============================ RESERVACIONES ============================ -->
+<section class="reserve torn-t torn-b" id="reservar" aria-labelledby="reserve-title">
+  <div class="wrap reserve__grid">
+    <div class="reserve__main">
+      <h2 class="d-title" id="reserve-title">¿Listo para tu próximo corte?</h2>
+      <div class="reserve__cta">
+        <button type="button" class="btn btn--red" data-book>Reservar mi cita</button>
+        <a class="btn btn--line-ink" data-wa href="#">
+          <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <ol class="flow" aria-label="Pasos para reservar">
+      <li>Servicio</li>
+      <li>Fecha</li>
+      <li>Hora</li>
+      <li>Nombre</li>
+      <li>Teléfono</li>
+      <li>Confirmación</li>
+    </ol>
+  </div>
+</section>
+
+<!-- ============================ UBICACIÓN ============================ -->
+<section class="visit" id="ubicacion" aria-labelledby="visit-title">
+  <div class="wrap visit__grid">
+    <div class="visit__info">
+      <h2 class="d-title" id="visit-title">Visítanos.</h2>
+
+      <dl class="visit__list">
+        <div><dt>Dirección</dt><dd data-cfg="location.address">[Dirección]</dd></div>
+        <div><dt>Horarios</dt><dd><ul id="hours"></ul></dd></div>
+        <div><dt>Teléfono</dt><dd><a data-link="phone" href="#" data-cfg="contact.phone">[Teléfono]</a></dd></div>
+        <div><dt>Instagram</dt><dd><a data-link="instagram" href="#" data-cfg="contact.instagram">[@Instagram]</a></dd></div>
+      </dl>
+
+      <a class="btn btn--red" data-link="maps" href="#">Cómo llegar</a>
+    </div>
+
+    <!-- Google Maps: pega la URL de inserción en config.location.mapEmbedUrl -->
+    <div class="map" data-map>
+      <p class="map__ph"><strong>Aquí va Google Maps</strong><span>Agrega mapEmbedUrl en js/config.js</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REDES ============================ -->
+<section class="social" id="redes" aria-labelledby="social-title">
+  <div class="wrap social__grid">
+    <div class="social__main">
+      <h2 class="d-title" id="social-title">Sigue el estilo.</h2>
+      <ul class="social__links">
+        <li><a data-link="instagram" href="#"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg><span>Instagram</span></a></li>
+        <li><a data-link="tiktok" href="#"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg><span>TikTok</span></a></li>
+        <li><a data-link="whatsapp" href="#"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg><span>WhatsApp</span></a></li>
+      </ul>
+    </div>
+
+    <!-- Espacio para el feed real de Instagram (widget oficial, Behold, etc.). No simular publicaciones. -->
+    <div class="feed" data-instagram-feed>
+      <div class="feed__grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <p class="feed__note">Espacio reservado para tus publicaciones reales de Instagram.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CTA FINAL ============================ -->
+<section class="final" aria-labelledby="final-title">
+  <div class="wrap final__inner">
+    <h2 class="final__title" id="final-title">Tu próximo corte empieza aquí.</h2>
+    <div class="final__cta">
+      <button type="button" class="btn btn--red btn--lg" data-book>Reservar cita</button>
+      <p>Agenda en minutos.</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="pole" aria-hidden="true"></div>
+  <div class="wrap foot__grid">
+    <div class="foot__brand">
+      <p class="foot__name" data-cfg="brand.name">BLACK & RED BARBER SHOP</p>
+      <p class="foot__tag" data-cfg="brand.tagline">CORTES QUE HABLAN POR TI.</p>
+    </div>
+
+    <nav class="foot__nav" aria-label="Pie de página">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#trabajos">Trabajos</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+        <li><button type="button" class="linkbtn" data-book>Reservar</button></li>
+      </ul>
+    </nav>
+
+    <ul class="foot__social" aria-label="Redes sociales">
+      <li><a data-link="instagram" href="#" aria-label="Instagram"><svg class="ico" aria-hidden="true"><use href="#i-instagram"/></svg></a></li>
+      <li><a data-link="tiktok" href="#" aria-label="TikTok"><svg class="ico" aria-hidden="true"><use href="#i-tiktok"/></svg></a></li>
+      <li><a data-link="whatsapp" href="#" aria-label="WhatsApp"><svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg></a></li>
+    </ul>
+
+    <p class="foot__copy">© <span data-year>2026</span> <span data-cfg="brand.name">BLACK & RED BARBER SHOP</span></p>
+  </div>
+</footer>
+
+<!-- Botón flotante de WhatsApp (mensaje y número desde config.js) -->
+<a class="wa" data-wa href="#" aria-label="Escribir por WhatsApp">
+  <svg class="ico" aria-hidden="true"><use href="#i-whatsapp"/></svg>
+  <span class="wa__label">WhatsApp</span>
+</a>
+
+<!-- ============================ RESERVA (diálogo) ============================
+     Flujo: servicio → fecha → hora → nombre → teléfono → confirmación.
+     El destino final (WhatsApp / enlace externo / API) se define en config.booking. -->
+<dialog class="book" id="booking" aria-labelledby="book-title">
+  <form id="book-form" novalidate>
+    <header class="book__head">
+      <h2 id="book-title">Reservar cita</h2>
+      <button type="button" class="book__close" data-close aria-label="Cerrar">
+        <svg class="ico" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </header>
+
+    <div class="book__progress" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="book__count" id="book-count" aria-live="polite"></p>
+
+    <div class="book__steps">
+      <fieldset data-step="service">
+        <legend>Elige el servicio</legend>
+        <div class="opts" id="book-services"></div>
+      </fieldset>
+
+      <fieldset data-step="date">
+        <legend>Elige la fecha</legend>
+        <label class="field"><span>Fecha</span><input type="date" id="book-date" required></label>
+      </fieldset>
+
+      <fieldset data-step="time">
+        <legend>Elige la hora</legend>
+        <div class="times" id="book-times"></div>
+      </fieldset>
+
+      <fieldset data-step="name">
+        <legend>¿A nombre de quién?</legend>
+        <label class="field"><span>Nombre</span><input type="text" id="book-name" autocomplete="name" required></label>
+      </fieldset>
+
+      <fieldset data-step="phone">
+        <legend>¿A qué teléfono te escribimos?</legend>
+        <label class="field"><span>Teléfono</span><input type="tel" id="book-phone" autocomplete="tel" inputmode="tel" required></label>
+      </fieldset>
+
+      <fieldset data-step="confirm">
+        <legend>Confirma tu cita</legend>
+        <dl class="summary" id="book-summary"></dl>
+        <p class="book__note" id="book-note"></p>
+      </fieldset>
+
+      <div class="book__done" id="book-done" hidden>
+        <h3 id="book-done-title"></h3>
+        <p id="book-done-text"></p>
+      </div>
+    </div>
+
+    <p class="book__error" id="book-error" role="alert"></p>
+
+    <footer class="book__foot">
+      <button type="button" class="btn btn--line" data-prev>Atrás</button>
+      <button type="button" class="btn btn--red" data-next>Siguiente</button>
+    </footer>
+  </form>
+</dialog>
+
+</body>
+</html>
